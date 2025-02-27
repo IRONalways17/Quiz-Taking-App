@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Attempt Quiz (ID: {{ quiz.quiz_id }})</h2>
+<form method="POST" action="">
+    {% for q in questions %}
+        <div>
+            <p><strong>Q{{ loop.index }}: {{ q.question_text }}</strong></p>
+            <label><input type="radio" name="question_{{q.question_id}}" value="1"> {{ q.option_1 }}</label><br>
+            <label><input type="radio" name="question_{{q.question_id}}" value="2"> {{ q.option_2 }}</label><br>
+            <label><input type="radio" name="question_{{q.question_id}}" value="3"> {{ q.option_3 }}</label><br>
+            <label><input type="radio" name="question_{{q.question_id}}" value="4"> {{ q.option_4 }}</label><br>
+        </div>
+        <hr>
+    {% endfor %}
+    <button type="submit">Submit Quiz</button>
+</form>
+{% endblock %}

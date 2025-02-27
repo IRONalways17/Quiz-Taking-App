@@ -1,0 +1,25 @@
+quiz_master/
+├── app.py
+├── config.py
+├── requirements.txt
+├── create_db.py
+├── models.py
+├── routes.py
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── scripts.js
+│   └── images/
+├── templates/
+│   ├── base.html
+│   ├── login.html
+│   ├── register.html
+│   ├── admin_dashboard.html
+│   ├── user_dashboard.html
+│   ├── subject_form.html
+│   ├── chapter_form.html
+│   ├── quiz_form.html
+│   ├── question_form.html
+│   └── quiz_attempt.html
+└── __init__.py

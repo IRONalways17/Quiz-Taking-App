@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<p>Welcome, Admin!</p>
+
+<h3>Subjects</h3>
+<ul>
+    {% for subject in subjects %}
+    <li>{{ subject.name }} 
+        - <a href="{{ url_for('main_bp.add_chapter', subject_id=subject.subject_id) }}">Add Chapter</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('main_bp.add_subject') }}">Add Subject</a>
+{% endblock %}

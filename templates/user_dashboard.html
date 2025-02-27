@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>User Dashboard</h2>
+<h3>Available Quizzes</h3>
+<ul>
+    {% for quiz in quizzes %}
+    <li>
+        Quiz ID: {{ quiz.quiz_id }}, Chapter ID: {{ quiz.chapter_id }}, Date: {{ quiz.date }},
+        <a href="{{ url_for('main_bp.quiz_attempt', quiz_id=quiz.quiz_id) }}">Attempt</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Register</h2>
+<form method="POST" action="{{ url_for('main_bp.register') }}">
+    <label>Email:</label>
+    <input type="email" name="email" required><br><br>
+    <label>Password:</label>
+    <input type="password" name="password" required><br><br>
+    <label>Full Name:</label>
+    <input type="text" name="full_name" required><br><br>
+    <label>Qualification:</label>
+    <input type="text" name="qualification"><br><br>
+    <label>DOB:</label>
+    <input type="date" name="dob"><br><br>
+    <button type="submit">Register</button>
+</form>
+{% endblock %}
